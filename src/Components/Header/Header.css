@@ -1,0 +1,15 @@
+.header{
+display:flex;
+justify-content: space-around;
+background-color: brown;
+color: #ffffff;
+align-items: center;
+}
+.headerimage{
+    width:100%;
+    height:20rem;
+}
+.cartbutton{
+    width:150px;
+    height:3vmax;
+}
