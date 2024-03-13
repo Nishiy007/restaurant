@@ -1,0 +1,14 @@
+.summary{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    color: #ffffff;
+    border: 1px;
+    box-shadow: 0px 8px 20px 3px black;
+    border-radius: 25px;
+    text-align: center;
+   top: -100px;
+   position: relative;
+   background-color: #3f3f3f;
+}

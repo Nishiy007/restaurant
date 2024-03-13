@@ -1,0 +1,19 @@
+.meal{
+    background-color: #ffffff;
+    width: 70%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+
+}
+.meal div{
+    border-bottom: 1px solid #3f3f3f;
+    padding: 30px;
+    width: 90%;
+    margin:auto;
+}
+.price{
+    color: brown;
+    font-weight: bold;
+}
