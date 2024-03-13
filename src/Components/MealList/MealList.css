@@ -4,10 +4,11 @@
     border-radius: 25px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     margin:auto;
 
 }
-.meal div{
+.meal > div{
     border-bottom: 1px solid #3f3f3f;
     padding: 30px;
     width: 90%;
@@ -16,4 +17,18 @@
 .price{
     color: brown;
     font-weight: bold;
+}
+.btn{
+    background-color: brown;
+    border-radius: 25px;
+    border: none;
+    width: 50px;
+    color: #ffffff;
+}
+.mealform input{
+width: 30px;
+}
+.mealcontainer{
+    display: flex;
+    justify-content: space-between;
 }
