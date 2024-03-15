@@ -2,7 +2,10 @@ import React from 'react'
 import './Cart.css';
 import Modal from '../UI/Modal';
 
-function Cart() {
+function Cart(props) {
+const cartCloseHandler=()=>{
+  props.setOpen(false);
+}
   return ( 
     <Modal>
     <div className="cartcontainer">
@@ -12,7 +15,7 @@ function Cart() {
             <h2>35.62</h2>
         </div>
         <div>
-            <button>
+            <button onClick={cartCloseHandler}>
                 Close
             </button>
             <button>Order</button>
