@@ -15,3 +15,32 @@
     justify-content: space-around;
     flex-direction: row;
 }
+.cartItem-price{
+  color: rgb(118,31,9);
+  font-weight: 600;
+}
+
+.cartItem-main--actions{
+  display: flex;
+  flex-direction: row;
+}
+
+.cartItem-action-dec{
+  width: 35px;
+  height: 1.7vmax;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgb(118,31,9);
+  margin: 6px;
+}
+
+.cartItem-action-inc{
+  width: 35px;
+  height: 1.7vmax;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin: 6px;
+  background-color: rgb(118,31,9);
+  color: #ffffff;
+}

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import "./MealList.css";
+import CartContext from '../../Store/Cart-Context';
+
 
 function MealList() {
+    const cartctx=useContext(CartContext)
+    const [amounts,setAmounts]=useState({});
     const mealItem = [
         {
             id: 1,
@@ -28,7 +32,22 @@ function MealList() {
             price: 16.0,
         },
     ];
-
+    const addCartItemHandler = (item) => {
+        cartctx.addItem({
+          id: item.id,
+          name: item.name,
+          amount: +amounts[item.id] || 1,
+          price: item.price,
+        });
+      };
+    
+      const amountChangeHandler = (itemId, newAmount) => {
+        setAmounts((prevAmounts) => ({
+          ...prevAmounts,
+          [itemId]: newAmount,
+        }));
+      };
+    
     return (
         <div className="meal" >
             {
@@ -40,10 +59,11 @@ function MealList() {
                                 <p>{item.description}</p>
                                 <h3 className="price">${item.price}</h3>
                             </div>
-                            <form className="mealform">
+                            <form className="mealform"  onSubmit={(e)=>e.preventDefault()}>
                                 <h4>Amount</h4>
-                                <input type="number" value="1" />
-                                <button className="btn">+Add</button>
+                                <input type="number" defaultValue={amounts[item.id] || 1}
+                  onChange={(e) => amountChangeHandler(item.id, e.target.value)}/>
+                                <button className="btn"  onClick={(e)=>addCartItemHandler(item)}>+Add</button>
                             </form>
 
                         </div>
